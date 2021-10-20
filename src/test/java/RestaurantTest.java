@@ -78,9 +78,10 @@ class RestaurantTest {
         int totalAmount = 0;
         refactedCodeLines();
         List<String> selectedItems = Arrays.asList("Sweet corn soup","Vegetable lasagne");
-
+        totalAmount = restaurant.totalOrderCost(selectedItems);
         assertEquals(388,totalAmount);
     }
+
     //<<<<<<<<<<<<<<<<<<<<<<<Total Order Amount>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
