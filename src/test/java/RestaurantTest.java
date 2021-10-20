@@ -2,6 +2,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.time.LocalTime;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -69,5 +71,18 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  //>>>>>>>>>>>>>>>>>>>>>>>>>>>Total Order Amount<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+    @Test
+    public void totalamount_for_selected_items_which_exist_in_item_list_should_display_total_cost(){
+        int totalAmount = 0;
+        refactedCodeLines();
+        List<String> selectedItems = Arrays.asList("Sweet corn soup","Vegetable lasagne");
+
+        assertEquals(388,totalAmount);
+    }
+    //<<<<<<<<<<<<<<<<<<<<<<<Total Order Amount>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
 
 }
